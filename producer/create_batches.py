@@ -19,7 +19,7 @@ for start in range(0, len(records), BATCH_SIZE):
     batch_number = (start // BATCH_SIZE) + 1
 
     batch_file = BATCH_DIR / f"hospital_batch_{batch_number:03}.json"
-
+    
     with open(batch_file, "w") as file:
         json.dump(batch, file, indent=2)
 
