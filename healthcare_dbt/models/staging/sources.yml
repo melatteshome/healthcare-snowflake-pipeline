@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: healthcare
+    database: HEALTHCARE_DB
+    schema: RAW
+
+    tables:
+      - name: hospital_patients
