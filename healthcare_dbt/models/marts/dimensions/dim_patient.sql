@@ -1,3 +1,8 @@
+    {{ config(
+        materialized='table',
+        schema='marts'
+    ) }}
+
 with patients as (
 
     select
