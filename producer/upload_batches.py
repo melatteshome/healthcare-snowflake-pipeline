@@ -12,6 +12,8 @@ SNOWFLAKE_ACCOUNT = os.getenv("SNOWFLAKE_ACCOUNT")
 SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER")
 PRIVATE_KEY_PASSPHRASE = os.getenv("SNOWFLAKE_PRIVATE_KEY_PASSPHRASE")
 SNOWFLAKE_HOST = f"{SNOWFLAKE_ACCOUNT}.snowflakecomputing.com"
+PRIVATE_KEY_PATH = os.getenv("PRIVATE_KEY_PATH")
+
 
 BATCH_DIR = Path("batches")
 
@@ -28,7 +30,6 @@ from cryptography.hazmat.primitives.serialization import (
     NoEncryption,
 )
 
-PRIVATE_KEY_PATH = "/home/melat/.snowflake/keys/rsa_key.p8"
 
 with open(PRIVATE_KEY_PATH, "rb") as key_file:
     private_key_obj = load_pem_private_key(
